@@ -1,0 +1,1296 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+			"uid": "0-2a54167d-95fe-4421-8d02-fb9c8594854a",
+			"name": "demandes-acheminement",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"3190dead-55da-4f48-ad00-ef265bd4788e",
+				"52fe2b51-603d-45a8-bf9a-1e89d8f42c87",
+				"504172fe-2594-4156-bebf-f52f9aec7f8c",
+				"043a8235-4247-4ed3-a808-922e2fcd87c4",
+				"ab89798e-36bb-4b3d-82b0-a07ecf4219da",
+				"21638409-41ec-4dfa-ad2a-0fe90ee4db62",
+				"c5e9df9c-d716-4593-b31b-ae6d80100d87",
+				"fd5eae5f-5eec-4c33-855d-92fefe9672ee",
+				"76178831-27e6-4a2b-ac5b-7f499f974fd3",
+				"badacc8b-aeb7-44ca-965a-052e394296fe",
+				"d60643d3-bced-4698-bf63-26bef971e7b7"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-07-20T20:55:45.552Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "043a8235-4247-4ed3-a808-922e2fcd87c4",
+					"uid": "0-043a8235-4247-4ed3-a808-922e2fcd87c4",
+					"name": "Upsert Contracts Copy",
+					"url": "http://localhost:8087/demandes-acheminement/v1/contracts",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"pathVariables": {}
+				},
+				{
+					"id": "21638409-41ec-4dfa-ad2a-0fe90ee4db62",
+					"uid": "0-21638409-41ec-4dfa-ad2a-0fe90ee4db62",
+					"name": "Lock",
+					"url": "https://api.offre-dev.grtgaz.com/demandes-acheminement/v1/transmission-requests/locks?gasDay=2021-09-21",
+					"description": "",
+					"data": null,
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gasDay",
+							"value": "2021-09-21",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMwNTg2ODEzLCJuYmYiOjE2MzA1ODY4MTMsImV4cCI6MTYzMDU5MDcxMywiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQXl2Ym1oWkpqeFRvTGh4NmxuYWhuL0ZLVXgwVmVSN1pmWUhlRzF6TFlnMHNCd1ZKN3lEaDYrV2RIeEoyMDlYUk8iLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJwd2RfZXhwIjoiMzMyNzQ4IiwicHdkX3VybCI6Imh0dHBzOi8vcG9ydGFsLm1pY3Jvc29mdG9ubGluZS5jb20vQ2hhbmdlUGFzc3dvcmQuYXNweCIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBQlkuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJLdWFsSjBaNW5SdGlXbkVEOFRJSjhMd2VUSkpaNE5sSUtHZ0lvT2FfTldJIiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJzb3BzQG9mZnJlLWRldi5ncnRnYXouY29tIiwidXBuIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInV0aSI6IkxHVmtCT08wbjAtck1LYWtFcm9rQUEiLCJ2ZXIiOiIxLjAifQ.dH2KnII6-Vy4J6zDwDCeWEFH1nfMENetp3nW_5R3bR-NS7ggWUSzGZIeqSAAmc0IPf-43-7l7suKa2jqRsSwgTC0Yo5c1ZVHW9PoEt5vJUKm8i58cILoL8C2l9JVX3NheO654Hyqo14pAoXJ1EMevUkfEfzn2NXkqpmtdlvYuD5kFqtwNjk9XuX-JmgtyJPZX7jVFmMZPRngO4Xk74Bbn7Tf_dZeGvRXqJkNNDSh9kl8wz1KOj1ainPz3bYHy1X0sqyGp5WNadk9V0c8XLf0jBrCmcmHKNWySMVBWKMZEyi9ZL2F_wFfYLCB52mn1_Aq0011k8q0lHDC8YcZBCt7Sg"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMwNTg2ODEzLCJuYmYiOjE2MzA1ODY4MTMsImV4cCI6MTYzMDU5MDcxMywiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQXl2Ym1oWkpqeFRvTGh4NmxuYWhuL0ZLVXgwVmVSN1pmWUhlRzF6TFlnMHNCd1ZKN3lEaDYrV2RIeEoyMDlYUk8iLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJwd2RfZXhwIjoiMzMyNzQ4IiwicHdkX3VybCI6Imh0dHBzOi8vcG9ydGFsLm1pY3Jvc29mdG9ubGluZS5jb20vQ2hhbmdlUGFzc3dvcmQuYXNweCIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBQlkuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJLdWFsSjBaNW5SdGlXbkVEOFRJSjhMd2VUSkpaNE5sSUtHZ0lvT2FfTldJIiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJzb3BzQG9mZnJlLWRldi5ncnRnYXouY29tIiwidXBuIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInV0aSI6IkxHVmtCT08wbjAtck1LYWtFcm9rQUEiLCJ2ZXIiOiIxLjAifQ.dH2KnII6-Vy4J6zDwDCeWEFH1nfMENetp3nW_5R3bR-NS7ggWUSzGZIeqSAAmc0IPf-43-7l7suKa2jqRsSwgTC0Yo5c1ZVHW9PoEt5vJUKm8i58cILoL8C2l9JVX3NheO654Hyqo14pAoXJ1EMevUkfEfzn2NXkqpmtdlvYuD5kFqtwNjk9XuX-JmgtyJPZX7jVFmMZPRngO4Xk74Bbn7Tf_dZeGvRXqJkNNDSh9kl8wz1KOj1ainPz3bYHy1X0sqyGp5WNadk9V0c8XLf0jBrCmcmHKNWySMVBWKMZEyi9ZL2F_wFfYLCB52mn1_Aq0011k8q0lHDC8YcZBCt7Sg"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"pathVariables": {}
+				},
+				{
+					"id": "3190dead-55da-4f48-ad00-ef265bd4788e",
+					"uid": "0-3190dead-55da-4f48-ad00-ef265bd4788e",
+					"name": "Find Contracts",
+					"url": "http://localhost:8087/demandes-acheminement/v1/services",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "{\n    \"serviceId\": 3,\n    \"contractCode\": \"GFPIVB0100\",\n    \"serviceType\": \"PEG_ACCESS\",\n    \"startDate\": \"2021-01-01\",\n    \"endDate\": \"2022-01-01\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "504172fe-2594-4156-bebf-f52f9aec7f8c",
+					"uid": "0-504172fe-2594-4156-bebf-f52f9aec7f8c",
+					"name": "Upsert Contracts",
+					"url": "http://localhost:8087/demandes-acheminement/v1/contracts",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"pathVariables": {}
+				},
+				{
+					"id": "52fe2b51-603d-45a8-bf9a-1e89d8f42c87",
+					"uid": "0-52fe2b51-603d-45a8-bf9a-1e89d8f42c87",
+					"name": "Upsert DA",
+					"url": "https://api.carimbo.offre-dev.grtgaz.com/demandes-acheminement/v1/transmission-requests",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "{\n    \"generationDateTime\": \"2021-01-01T00:00:00.000Z\",\n    \"gasDayStart\": \"2021-01-01T00:00:00.000Z\",\n    \"gasDayEnd\": \"2021-01-01T00:00:00.000Z\",\n    \"contractCode\": \"GFGDSB01\",\n    \"channel\": \"CARIMBO\",\n    \"transmissionRequests\": [\n        {\n            \"gasDay\": \"2021-09-22\",\n            \"contractualPoint\": \"PEG\",\n            \"contractCode\": \"GFGDSB01\",\n            \"counterparty\": \"GFGDSB\",\n            \"direction\": \"REC\",\n            \"dailyValue\": 599,\n            \"user\": \"postman\",\n            \"sideNominationType\": \"DSN\",\n            \"channel\": \"TF1\",\n            \"batchUser\": \"postman\",\n            \"generationDateTime\": \"2021-01-01T00:00:00.000Z\"\n        }\n            \n    ]\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "76178831-27e6-4a2b-ac5b-7f499f974fd3",
+					"uid": "0-76178831-27e6-4a2b-ac5b-7f499f974fd3",
+					"name": "load batch local Copy",
+					"url": "https://api.offre-stg.grtgaz.com/demandes-acheminement/v1/transmission-requests/load/batches",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "binary",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/csv",
+							"description": "",
+							"type": "text",
+							"enabled": false
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCIsImtpZCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMxODA2NDAyLCJuYmYiOjE2MzE4MDY0MDIsImV4cCI6MTYzMTgxMDMwMiwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQVRLMFdBb2pOU2tPcWZ1RFJGcDdNTjdyUzJhRmlkM05yb29WY05BcnJxdlNlNVZwMU1tNndrbE9BRUdpenNKQkMiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJyaCI6IjAuQVVjQU9Cd0J6VjZYS2t1TEhVNndCMlhVVl9aNk4tcGJUZUZBcUxKc2xDa284UTlIQUJZLiIsInJvbGVzIjpbIkNBUklNQk8tQWRtaW5pc3RyYXRldXIiXSwic2NwIjoiVXNlci5SZWFkIiwic3ViIjoiS3VhbEowWjVuUnRpV25FRDhUSUo4THdlVEpKWjRObElLR2dJb09hX05XSSIsInRpZCI6ImNkMDExYzM4LTk3NWUtNGIyYS04YjFkLTRlYjAwNzY1ZDQ1NyIsInVuaXF1ZV9uYW1lIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInVwbiI6InNvcHNAb2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJPTS1ZalMyaVdrLWJvU0M1WnVtWUFBIiwidmVyIjoiMS4wIn0.V5l_wn7z64rlpxzD_DcrAFIW-FyBIBm_ZAmojnMp73mhrGfvwiMlCEZ-Lfdu5K4EyoB1v1VG_Az5ipxtZ_XFfaAIE8_S9LAegPJPYAgp0XdftpbKz8NcV-THizQ1QJn8w2LNia3RyU8pwIcJ5rG_3q-l1tJrOvQLgl9erB40lseSkO73eUsDDMI13JVm-826E06Al2Ezr8ffIXJFRK5hHJT9aR7R4okk2cY8iCo6w08f-cdZQyBpkSa6qKAsyJMGC6WkrwhjX4lO3ExiBty-4WdTgKvfAV0WB56zdV_g05SImK4bvacgilZELZSx7_b19esRPjevoKWvubfC-Gpzdw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCIsImtpZCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMxODA2NDAyLCJuYmYiOjE2MzE4MDY0MDIsImV4cCI6MTYzMTgxMDMwMiwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQVRLMFdBb2pOU2tPcWZ1RFJGcDdNTjdyUzJhRmlkM05yb29WY05BcnJxdlNlNVZwMU1tNndrbE9BRUdpenNKQkMiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJyaCI6IjAuQVVjQU9Cd0J6VjZYS2t1TEhVNndCMlhVVl9aNk4tcGJUZUZBcUxKc2xDa284UTlIQUJZLiIsInJvbGVzIjpbIkNBUklNQk8tQWRtaW5pc3RyYXRldXIiXSwic2NwIjoiVXNlci5SZWFkIiwic3ViIjoiS3VhbEowWjVuUnRpV25FRDhUSUo4THdlVEpKWjRObElLR2dJb09hX05XSSIsInRpZCI6ImNkMDExYzM4LTk3NWUtNGIyYS04YjFkLTRlYjAwNzY1ZDQ1NyIsInVuaXF1ZV9uYW1lIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInVwbiI6InNvcHNAb2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJPTS1ZalMyaVdrLWJvU0M1WnVtWUFBIiwidmVyIjoiMS4wIn0.V5l_wn7z64rlpxzD_DcrAFIW-FyBIBm_ZAmojnMp73mhrGfvwiMlCEZ-Lfdu5K4EyoB1v1VG_Az5ipxtZ_XFfaAIE8_S9LAegPJPYAgp0XdftpbKz8NcV-THizQ1QJn8w2LNia3RyU8pwIcJ5rG_3q-l1tJrOvQLgl9erB40lseSkO73eUsDDMI13JVm-826E06Al2Ezr8ffIXJFRK5hHJT9aR7R4okk2cY8iCo6w08f-cdZQyBpkSa6qKAsyJMGC6WkrwhjX4lO3ExiBty-4WdTgKvfAV0WB56zdV_g05SImK4bvacgilZELZSx7_b19esRPjevoKWvubfC-Gpzdw"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "/Users/abdouldiallo/Desktop/toto.csv",
+					"headers": "//Content-Type: application/csv\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "ab89798e-36bb-4b3d-82b0-a07ecf4219da",
+					"uid": "0-ab89798e-36bb-4b3d-82b0-a07ecf4219da",
+					"name": "http://localhost:8080/kafka/cariocaservice-topic-local",
+					"url": "http://localhost:8080/kafka/cariocaservice-topic-local",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "badacc8b-aeb7-44ca-965a-052e394296fe",
+					"uid": "0-badacc8b-aeb7-44ca-965a-052e394296fe",
+					"name": "Post Lock",
+					"url": "https://api.carimbo.offre-dev.grtgaz.com/demandes-acheminement/v1/transmission-requests/locks?gas",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gas",
+							"value": null,
+							"equals": false,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "{\n    \"gasDay\": \"2021-09-21\",\n    \"contractualPoint\": \"IR0013\",\n    \"contractCode\": \"GFPIVQ01\",\n    \"direction\": \"Rec\",\n    \"active\": true,\n    \"typeDescription\": \"à la hausse\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "c5e9df9c-d716-4593-b31b-ae6d80100d87",
+					"uid": "0-c5e9df9c-d716-4593-b31b-ae6d80100d87",
+					"name": "kafka local",
+					"url": "http://localhost:8080/kafka/randomize/transmissionrequest-topic-local",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "{\n    \"payload\": {\n        \"className\": \"com.grtgaz.rio.avro.carimbo.mv_transmissionRequestsBatch_om.TransmissionRequestsBatchRecord\",\n        \"values\": {\n            \"generationDateTime\": \"2020-12-31T00:00:00.000Z\",\n            \"gasDayStart\": \"2021-01-01T00:00:00.000Z\",\n            \"gasDayEnd\": \"2021-01-30T00:00:00.000Z\",\n            \"contractCode\": \"GFPEGB01\",\n            \"channel\": \"CARIMBO\",\n            \"customerId\": null,\n            \"transmissionRequests\": [\n                {\n                    \"contractualPoint\": \"IR0006\",\n                    \"sideNominationType\": \"DSN\",\n                    \"counterparty\": \"ABDOUL_____\",\n                    \"direction\": \"RECEIVED\",\n                    \"gasDay\": \"2021-01-25T00:00:00.000Z\",\n                    \"dailyValue\": 61\n                }\n            ]\n        }\n    }\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "d60643d3-bced-4698-bf63-26bef971e7b7",
+					"uid": "0-d60643d3-bced-4698-bf63-26bef971e7b7",
+					"name": "POST Contracts",
+					"url": "https://api.offre-dev.grtgaz.com/demandes-acheminement/v1/contracts",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMwNTcyNDY2LCJuYmYiOjE2MzA1NzI0NjYsImV4cCI6MTYzMDU3NjM2NiwiYWNyIjoiMSIsImFpbyI6IkUyWmdZRGo1dWpYV3pGYWljc3NsbnpNOTl0RU1DOWx2RnNkYmRnaVlIS3oreExaL01YUFk1N3g5MmNYYXpiY3RHamhEd3YxbEFRPT0iLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJwd2RfZXhwIjoiMzQ3MDk1IiwicHdkX3VybCI6Imh0dHBzOi8vcG9ydGFsLm1pY3Jvc29mdG9ubGluZS5jb20vQ2hhbmdlUGFzc3dvcmQuYXNweCIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBQlkuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJLdWFsSjBaNW5SdGlXbkVEOFRJSjhMd2VUSkpaNE5sSUtHZ0lvT2FfTldJIiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJzb3BzQG9mZnJlLWRldi5ncnRnYXouY29tIiwidXBuIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInV0aSI6IkdpODN4MjVjeWtlMDZBWHB2T1JGQUEiLCJ2ZXIiOiIxLjAifQ.Gp1wh1IP7IlKZ_4epVq6cp6y-W5POBztJp90sDr6oBka7Lc-hH172RPxhHoMJwLgoyoTtfLAtNsyf-yueP2QAgr05Bf2JdFegymPOtbkptGLXD6zt514SZrW43PWSfS9jYc0T0PfdVrZO_q9g7Cq4RurgScEuywjhYjqC5cFq943SY2gaiXV-Q_F8NcgFy-FuyQccp3ogwB0FGkJpHhbFWSb37yYzv-rFvyAD0z76LkQDA5_4BnztC348_QJJvfcitjQpT1KiNZ07uJRp05eHy1uSAW4EYA-NbF9mm60MevcNK7OJPHqe7B1Bcr1h68ocx5mf6o-iIspvarRlKALqA"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMwNTcyNDY2LCJuYmYiOjE2MzA1NzI0NjYsImV4cCI6MTYzMDU3NjM2NiwiYWNyIjoiMSIsImFpbyI6IkUyWmdZRGo1dWpYV3pGYWljc3NsbnpNOTl0RU1DOWx2RnNkYmRnaVlIS3oreExaL01YUFk1N3g5MmNYYXpiY3RHamhEd3YxbEFRPT0iLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJwd2RfZXhwIjoiMzQ3MDk1IiwicHdkX3VybCI6Imh0dHBzOi8vcG9ydGFsLm1pY3Jvc29mdG9ubGluZS5jb20vQ2hhbmdlUGFzc3dvcmQuYXNweCIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBQlkuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJLdWFsSjBaNW5SdGlXbkVEOFRJSjhMd2VUSkpaNE5sSUtHZ0lvT2FfTldJIiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJzb3BzQG9mZnJlLWRldi5ncnRnYXouY29tIiwidXBuIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInV0aSI6IkdpODN4MjVjeWtlMDZBWHB2T1JGQUEiLCJ2ZXIiOiIxLjAifQ.Gp1wh1IP7IlKZ_4epVq6cp6y-W5POBztJp90sDr6oBka7Lc-hH172RPxhHoMJwLgoyoTtfLAtNsyf-yueP2QAgr05Bf2JdFegymPOtbkptGLXD6zt514SZrW43PWSfS9jYc0T0PfdVrZO_q9g7Cq4RurgScEuywjhYjqC5cFq943SY2gaiXV-Q_F8NcgFy-FuyQccp3ogwB0FGkJpHhbFWSb37yYzv-rFvyAD0z76LkQDA5_4BnztC348_QJJvfcitjQpT1KiNZ07uJRp05eHy1uSAW4EYA-NbF9mm60MevcNK7OJPHqe7B1Bcr1h68ocx5mf6o-iIspvarRlKALqA"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "{\n    \"serviceId\": 1,\n    \"contractCode\": \"GFGCIR01\",\n    \"startDate\": \"2021-08-01\",\n    \"endDate\": \"2021-10-01\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "fd5eae5f-5eec-4c33-855d-92fefe9672ee",
+					"uid": "0-fd5eae5f-5eec-4c33-855d-92fefe9672ee",
+					"name": "load batch local",
+					"url": "http://localhost:8087/demandes-acheminement/v1/transmission-requests/load/batches",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "binary",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/csv",
+							"description": "",
+							"type": "text",
+							"enabled": false
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCIsImtpZCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMyMTQxMDgxLCJuYmYiOjE2MzIxNDEwODEsImV4cCI6MTYzMjE0NDk4MSwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQW8rdFlJeWpoVHAvbVhCZElUbk9xVEQxWHlqWmp4Rnl2bm13a1FLdzJ6Y1JGRkp5aXRacEdJMjB3UzJWRUllSFkiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiOTIuMTAzLjE4MC4yMzQiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJyaCI6IjAuQVVjQU9Cd0J6VjZYS2t1TEhVNndCMlhVVl9aNk4tcGJUZUZBcUxKc2xDa284UTlIQUJZLiIsInJvbGVzIjpbIkNBUklNQk8tQWRtaW5pc3RyYXRldXIiXSwic2NwIjoiVXNlci5SZWFkIiwic3ViIjoiS3VhbEowWjVuUnRpV25FRDhUSUo4THdlVEpKWjRObElLR2dJb09hX05XSSIsInRpZCI6ImNkMDExYzM4LTk3NWUtNGIyYS04YjFkLTRlYjAwNzY1ZDQ1NyIsInVuaXF1ZV9uYW1lIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInVwbiI6InNvcHNAb2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJHbmk1Y25FOWJVR1FhTVVPdWFWWUFBIiwidmVyIjoiMS4wIn0.IwjbjoE4Wn-_IvZcb0MKfWTkBO3iDfDnwZVcR14Fod7Vdp-mXKQjZOq7bYCCGAtZRIHmxPiutfhjVqVng1bpiEcO4zRpC1mGC1dUyQqiC3FORvNLcMDX9Q4vm7IrjnjOtYWq50du0rU3kpycjlc9OxWEH-C9kn-jb_NIv-3xu_8XcqhNx7_nTu3MPZbZBa4F_7DaG8SbUnk-6qLV4Dx-5nuq1rAe33ENQcHCRYa9Il_Capt_mjJu65nKfVbvzVIZwWHSuac5sOEg3N2IkVI7sQakqnJ2ll92vbzssPP6L71SxoJoWLw9_xYbe62fKIoaw0py68MLTftdvuwGB7rO0g"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCIsImtpZCI6Imwzc1EtNTBjQ0g0eEJWWkxIVEd3blNSNzY4MCJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjMyMTQxMDgxLCJuYmYiOjE2MzIxNDEwODEsImV4cCI6MTYzMjE0NDk4MSwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQW8rdFlJeWpoVHAvbVhCZElUbk9xVEQxWHlqWmp4Rnl2bm13a1FLdzJ6Y1JGRkp5aXRacEdJMjB3UzJWRUllSFkiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiOTIuMTAzLjE4MC4yMzQiLCJuYW1lIjoiQ2hhcmfDqSBkZSBjb21wdGUgb3DDqXJhdGlvbm5lbCAoU09QUykiLCJvaWQiOiIzNDZhYTQ1Yi05MzI5LTRmMDMtODMxMi0yNjdhM2YxZjk1ZjQiLCJyaCI6IjAuQVVjQU9Cd0J6VjZYS2t1TEhVNndCMlhVVl9aNk4tcGJUZUZBcUxKc2xDa284UTlIQUJZLiIsInJvbGVzIjpbIkNBUklNQk8tQWRtaW5pc3RyYXRldXIiXSwic2NwIjoiVXNlci5SZWFkIiwic3ViIjoiS3VhbEowWjVuUnRpV25FRDhUSUo4THdlVEpKWjRObElLR2dJb09hX05XSSIsInRpZCI6ImNkMDExYzM4LTk3NWUtNGIyYS04YjFkLTRlYjAwNzY1ZDQ1NyIsInVuaXF1ZV9uYW1lIjoic29wc0BvZmZyZS1kZXYuZ3J0Z2F6LmNvbSIsInVwbiI6InNvcHNAb2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJHbmk1Y25FOWJVR1FhTVVPdWFWWUFBIiwidmVyIjoiMS4wIn0.IwjbjoE4Wn-_IvZcb0MKfWTkBO3iDfDnwZVcR14Fod7Vdp-mXKQjZOq7bYCCGAtZRIHmxPiutfhjVqVng1bpiEcO4zRpC1mGC1dUyQqiC3FORvNLcMDX9Q4vm7IrjnjOtYWq50du0rU3kpycjlc9OxWEH-C9kn-jb_NIv-3xu_8XcqhNx7_nTu3MPZbZBa4F_7DaG8SbUnk-6qLV4Dx-5nuq1rAe33ENQcHCRYa9Il_Capt_mjJu65nKfVbvzVIZwWHSuac5sOEg3N2IkVI7sQakqnJ2ll92vbzssPP6L71SxoJoWLw9_xYbe62fKIoaw0py68MLTftdvuwGB7rO0g"
+					},
+					"collectionId": "2a54167d-95fe-4421-8d02-fb9c8594854a",
+					"rawModeData": "/Users/abdouldiallo/Desktop/toto.csv",
+					"headers": "//Content-Type: application/csv\n",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+			"uid": "0-54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+			"name": "Flux physique - Workflow",
+			"description": null,
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c841acee-efb0-4e89-82db-23548565fc5f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ad8a29f9-b8b9-407a-9342-3eed6769a0c8",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						]
+					}
+				}
+			],
+			"variables": [
+				{
+					"key": "fluxphysique_url",
+					"value": "http://localhost:8089/flux-physique",
+					"disabled": false
+				},
+				{
+					"key": "gas_day",
+					"value": "2020-02-27",
+					"disabled": false
+				},
+				{
+					"key": "pgd",
+					"value": "02",
+					"disabled": false
+				}
+			],
+			"order": [
+				"dc69772c-3cb9-44ad-994f-744e6bd9678c",
+				"040c1db8-d634-4c4d-b307-7600ed7b06cd",
+				"45c53f5f-5bd0-4bf1-8c88-d0a2d513059c",
+				"29094980-e214-4520-8e2d-fd5fccd19db6"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-09-28T13:07:20.918Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "040c1db8-d634-4c4d-b307-7600ed7b06cd",
+					"uid": "0-040c1db8-d634-4c4d-b307-7600ed7b06cd",
+					"name": "2 - Init contractual points",
+					"url": "{{nomination}}/v1/contractual-points/init",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+					"rawModeData": "[\n    {\n        \"code\": \"IR0006\",\n        \"label\": \"DUNKERQUE\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0010\",\n        \"label\": \"OBERGAILBACH\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0011\",\n        \"label\": \"OLTINGUE\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0013\",\n        \"label\": \"QUEVY\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0014\",\n        \"label\": \"BLARÉGNIES H\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0015\",\n        \"label\": \"TAISNIERES B\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0059\",\n        \"label\": \"Alveringem\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IR0060\",\n        \"label\": \"Virtualys\",\n        \"type\": \"PIR\"\n    },\n    {\n        \"code\": \"IT0001\",\n        \"label\": \"FOS TONKIN\",\n        \"type\": \"PITTM\"\n    },\n    {\n        \"code\": \"IT0002\",\n        \"label\": \"MONTOIR\",\n        \"type\": \"PITTM\"\n    },\n    {\n        \"code\": \"IT0003\",\n        \"label\": \"Fos Cavaou\",\n        \"type\": \"PITTM\"\n    },\n    {\n        \"code\": \"IT0004\",\n        \"label\": \"Dunkerque GNL\",\n        \"type\": \"PITTM\"\n    },\n    {\n        \"code\": \"IT000A\",\n        \"label\": \"PITTM DKB\",\n        \"type\": \"PITTM\"\n    },\n    {\n        \"code\": \"EG001F\",\n        \"label\": \"Bourse\",\n        \"type\": \"PEG\"\n    }\n]",
+					"pathVariables": {}
+				},
+				{
+					"id": "29094980-e214-4520-8e2d-fd5fccd19db6",
+					"uid": "0-29094980-e214-4520-8e2d-fd5fccd19db6",
+					"name": "4 - Process physical flow",
+					"url": "{{fluxphysique_url}}/v1/partitions",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+					"rawModeData": "{\n    \"gasDay\": \"{{gas_day}}\",\n    \"pgd\": \"{{pgd}}\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "45c53f5f-5bd0-4bf1-8c88-d0a2d513059c",
+					"uid": "0-45c53f5f-5bd0-4bf1-8c88-d0a2d513059c",
+					"name": "3 - Init nominations",
+					"url": "{{nomination}}/v1/nominations/_bulk",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+					"rawModeData": "{\n    \"operation\": \"upsert\",\n    \"nominations\": [\n        {\n            \"transactionOriginalId\": {{$randomInt}},\n            \"gasDay\": \"{{gas_day}}\",\n            \"pgd\": \"{{pgd}}\",\n            \"contractualPoint\": \"IR0060\",\n            \"direction\": \"Rec\",\n            \"contractCode\": \"GFEDFG01\",\n            \"counterparty\": \"GCSTA\",\n            \"currentValue\": 1516056,\n            \"requestedValue\": 1516056,\n            \"controlledValue\": 1516056,\n            \"optimizedValue\": 1516056,\n            \"sentValue\": 1516056,\n            \"partnerAcceptedValue\": 1516056,\n            \"confirmedValue\": 1516056\n        },\n        {\n            \"transactionOriginalId\": {{$randomInt}},\n            \"gasDay\": \"{{gas_day}}\",\n            \"pgd\": \"{{pgd}}\",\n            \"contractualPoint\": \"IR0013\",\n            \"direction\": \"Del\",\n            \"contractCode\": \"GFPIVQ01\",\n            \"counterparty\": \"FLXOPS\",\n            \"currentValue\": 1516056,\n            \"requestedValue\": 1516056,\n            \"controlledValue\": 1516056,\n            \"optimizedValue\": 1516056,\n            \"sentValue\": 1516056,\n            \"partnerAcceptedValue\": 1516056,\n            \"confirmedValue\": 1516056\n        }\n    ]\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "dc69772c-3cb9-44ad-994f-744e6bd9678c",
+					"uid": "0-dc69772c-3cb9-44ad-994f-744e6bd9678c",
+					"name": "1 - Init contracts",
+					"url": "{{nomination}}/v1/contracts/init",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "54e7b0a8-03ff-407b-a17e-e98d100a3fe5",
+					"rawModeData": "[\n  {\n    \"code\": \"GFJPMS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFJPMS\"\n  },\n  {\n    \"code\": \"GFLUMI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFLUMI\"\n  },\n  {\n    \"code\": \"GFMERC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMERC\"\n  },\n  {\n    \"code\": \"GFECON01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFECON\"\n  },\n  {\n    \"code\": \"GFEGLT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEGLT\"\n  },\n  {\n    \"code\": \"GFEDFG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEDFG\"\n  },\n  {\n    \"code\": \"GFEDFT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEDFT\"\n  },\n  {\n    \"code\": \"GFBPGM02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBPGM\"\n  },\n  {\n    \"code\": \"GFDONG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDONG\"\n  },\n  {\n    \"code\": \"GFDREN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDREN\"\n  },\n  {\n    \"code\": \"GFBNPP02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBNPP\"\n  },\n  {\n    \"code\": \"GFDIST01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDIST\"\n  },\n  {\n    \"code\": \"GFBRSE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBRSE\"\n  },\n  {\n    \"code\": \"GFCONO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCONO\"\n  },\n  {\n    \"code\": \"GFHEBV02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFHEBV\"\n  },\n  {\n    \"code\": \"GFDALK01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDALK\"\n  },\n  {\n    \"code\": \"GFGSLY01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSLY\"\n  },\n  {\n    \"code\": \"GFENDE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENDE\"\n  },\n  {\n    \"code\": \"GFENEL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENEL\"\n  },\n  {\n    \"code\": \"GFENOI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENOI\"\n  },\n  {\n    \"code\": \"GFGZPM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGZPM\"\n  },\n  {\n    \"code\": \"GFIBER01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFIBER\"\n  },\n  {\n    \"code\": \"GFINEO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFINEO\"\n  },\n  {\n    \"code\": \"GFAIRL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFAIRL\"\n  },\n  {\n    \"code\": \"GFATAT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFATAT\"\n  },\n  {\n    \"code\": \"GFEOST01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEOST\"\n  },\n  {\n    \"code\": \"GFESNT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFESNT\"\n  },\n  {\n    \"code\": \"GFGDSB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGDSB\"\n  },\n  {\n    \"code\": \"GFEONT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEONT\"\n  },\n  {\n    \"code\": \"GFEONR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEONR\"\n  },\n  {\n    \"code\": \"GFGDFN02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGDFN\"\n  },\n  {\n    \"code\": \"GFEXON01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEXON\"\n  },\n  {\n    \"code\": \"GFALCA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFALCA\"\n  },\n  {\n    \"code\": \"GFAZGN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFAZGN\"\n  },\n  {\n    \"code\": \"GFALTE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFALTE\"\n  },\n  {\n    \"code\": \"GFGNCF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGNCF\"\n  },\n  {\n    \"code\": \"GFELEB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFELEB\"\n  },\n  {\n    \"code\": \"GFENIG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENIG\"\n  },\n  {\n    \"code\": \"GFRDIA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRDIA\"\n  },\n  {\n    \"code\": \"GFRBSC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRBSC\"\n  },\n  {\n    \"code\": \"GFMERR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMERR\"\n  },\n  {\n    \"code\": \"GFMOST01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMOST\"\n  },\n  {\n    \"code\": \"GFNEXN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNEXN\"\n  },\n  {\n    \"code\": \"GFPOWO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPOWO\"\n  },\n  {\n    \"code\": \"GFCOUP01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFCOUP\"\n  },\n  {\n    \"code\": \"GFNWTT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNWTT\"\n  },\n  {\n    \"code\": \"GFRUHR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRUHR\"\n  },\n  {\n    \"code\": \"GFMITS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMITS\"\n  },\n  {\n    \"code\": \"GFGDFB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGDFB\"\n  },\n  {\n    \"code\": \"GFSGCI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSGCI\"\n  },\n  {\n    \"code\": \"GFWING01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFWING\"\n  },\n  {\n    \"code\": \"GFOBIS01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOBIS\"\n  },\n  {\n    \"code\": \"GFTRAF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTRAF\"\n  },\n  {\n    \"code\": \"GFASMU01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFASMU\"\n  },\n  {\n    \"code\": \"GFSECU01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSECU\"\n  },\n  {\n    \"code\": \"GFEDPG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEDPG\"\n  },\n  {\n    \"code\": \"GFVITO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVITO\"\n  },\n  {\n    \"code\": \"GFVNGT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVNGT\"\n  },\n  {\n    \"code\": \"GFRDMG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRDMG\"\n  },\n  {\n    \"code\": \"GFGRDF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGRDF\"\n  },\n  {\n    \"code\": \"GFVETR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVETR\"\n  },\n  {\n    \"code\": \"GFPERS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPERS\"\n  },\n  {\n    \"code\": \"GFROQE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFROQE\"\n  },\n  {\n    \"code\": \"GFCITI02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCITI\"\n  },\n  {\n    \"code\": \"GFENLO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENLO\"\n  },\n  {\n    \"code\": \"GFROUS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFROUS\"\n  },\n  {\n    \"code\": \"GFEGOS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEGOS\"\n  },\n  {\n    \"code\": \"GFBONI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBONI\"\n  },\n  {\n    \"code\": \"GFSWOM01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWOM\"\n  },\n  {\n    \"code\": \"TIOBIR01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIT03\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFTORA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTORA\"\n  },\n  {\n    \"code\": \"GFSTGO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSTGO\"\n  },\n  {\n    \"code\": \"GFIDEX01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFIDEX\"\n  },\n  {\n    \"code\": \"GFOBIT01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIR10\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOPER01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIT02\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFSWMQ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWMQ\"\n  },\n  {\n    \"code\": \"GFGRTG01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFGRTG\"\n  },\n  {\n    \"code\": \"GFOBIR13\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIR14\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIR44\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFCACI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCACI\"\n  },\n  {\n    \"code\": \"GFSWOD01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWOD\"\n  },\n  {\n    \"code\": \"GFGOND01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGOND\"\n  },\n  {\n    \"code\": \"GFMACQ01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMACQ\"\n  },\n  {\n    \"code\": \"GFDACO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDACO\"\n  },\n  {\n    \"code\": \"GFBGGR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBGGR\"\n  },\n  {\n    \"code\": \"GFOBIR06\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIR11\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFLAMP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFLAMP\"\n  },\n  {\n    \"code\": \"GFCARG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCARG\"\n  },\n  {\n    \"code\": \"GFSOLS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSOLS\"\n  },\n  {\n    \"code\": \"GFSOVN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSOVN\"\n  },\n  {\n    \"code\": \"GFRWET01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRWET\"\n  },\n  {\n    \"code\": \"GFBARC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBARC\"\n  },\n  {\n    \"code\": \"GFSPIA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSPIA\"\n  },\n  {\n    \"code\": \"GFOSIR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFOSIR\"\n  },\n  {\n    \"code\": \"GFGEGS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGEGS\"\n  },\n  {\n    \"code\": \"GFNOVA02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNOVA\"\n  },\n  {\n    \"code\": \"Contrat pour IPLABEL\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFRNLT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRNLT\"\n  },\n  {\n    \"code\": \"GFDBAG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDBAG\"\n  },\n  {\n    \"code\": \"GFGDBX01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGDBX\"\n  },\n  {\n    \"code\": \"GFSAKR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSAKR\"\n  },\n  {\n    \"code\": \"GFCELT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCELT\"\n  },\n  {\n    \"code\": \"GFGOLD01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGOLD\"\n  },\n  {\n    \"code\": \"GFGUNV01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGUNV\"\n  },\n  {\n    \"code\": \"GFSENE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSENE\"\n  },\n  {\n    \"code\": \"GFSPEG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSPEG\"\n  },\n  {\n    \"code\": \"GFSTAA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSTAA\"\n  },\n  {\n    \"code\": \"GFSETL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSETL\"\n  },\n  {\n    \"code\": \"GFSOTG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSOTG\"\n  },\n  {\n    \"code\": \"GFVIAL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVIAL\"\n  },\n  {\n    \"code\": \"GFTGPL02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTGPL\"\n  },\n  {\n    \"code\": \"GFSTOR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSTOR\"\n  },\n  {\n    \"code\": \"GFVERB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVERB\"\n  },\n  {\n    \"code\": \"GFNTGA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNTGA\"\n  },\n  {\n    \"code\": \"GFDUFE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDUFE\"\n  },\n  {\n    \"code\": \"GFNTGF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNTGF\"\n  },\n  {\n    \"code\": \"Contrat TEGAZ visu mesures\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"VISUMESURES\"\n  },\n  {\n    \"code\": \"GFKOCH01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFKSTS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFKSTS\"\n  },\n  {\n    \"code\": \"GFPETR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPETR\"\n  },\n  {\n    \"code\": \"GFARKE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFARKE\"\n  },\n  {\n    \"code\": \"GFUEMG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFUEMG\"\n  },\n  {\n    \"code\": \"GFENEC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENEC\"\n  },\n  {\n    \"code\": \"GFLVEN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFLVEN\"\n  },\n  {\n    \"code\": \"GFVENC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVENC\"\n  },\n  {\n    \"code\": \"GFADIS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFADIS\"\n  },\n  {\n    \"code\": \"GFBPGE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBPGE\"\n  },\n  {\n    \"code\": \"GFBPEU01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBPEU\"\n  },\n  {\n    \"code\": \"GFUFGG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFUFGG\"\n  },\n  {\n    \"code\": \"GFGPAR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGPAR\"\n  },\n  {\n    \"code\": \"GFSAVE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSAVE\"\n  },\n  {\n    \"code\": \"GFSONA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSONA\"\n  },\n  {\n    \"code\": \"GFOBIR31\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIR35\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFGALP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGALP\"\n  },\n  {\n    \"code\": \"GFKEMO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFKEMO\"\n  },\n  {\n    \"code\": \"GFENVM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENVM\"\n  },\n  {\n    \"code\": \"GFBORA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBORA\"\n  },\n  {\n    \"code\": \"GFARCF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFARCF\"\n  },\n  {\n    \"code\": \"GFARCE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFARCE\"\n  },\n  {\n    \"code\": \"GFSTKM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSTKM\"\n  },\n  {\n    \"code\": \"GFVESG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVESG\"\n  },\n  {\n    \"code\": \"GFGVMA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGVMA\"\n  },\n  {\n    \"code\": \"GFEMIN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEMIN\"\n  },\n  {\n    \"code\": \"GFFREE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFFREE\"\n  },\n  {\n    \"code\": \"GFSEGE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSEGE\"\n  },\n  {\n    \"code\": \"GFERAM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFERAM\"\n  },\n  {\n    \"code\": \"GFENRS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENRS\"\n  },\n  {\n    \"code\": \"GFNAPH01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNAPH\"\n  },\n  {\n    \"code\": \"GFCAST01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCAST\"\n  },\n  {\n    \"code\": \"GFGASE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGASE\"\n  },\n  {\n    \"code\": \"GFNEAS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNEAS\"\n  },\n  {\n    \"code\": \"GFASCO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFASCO\"\n  },\n  {\n    \"code\": \"GFBAIK01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBAIK\"\n  },\n  {\n    \"code\": \"GFRPWR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRPWR\"\n  },\n  {\n    \"code\": \"GFTERR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTERR\"\n  },\n  {\n    \"code\": \"GFSLSU01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSLSU\"\n  },\n  {\n    \"code\": \"GFECOG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFECOG\"\n  },\n  {\n    \"code\": \"GFETIF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFETIF\"\n  },\n  {\n    \"code\": \"GFBASE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBASE\"\n  },\n  {\n    \"code\": \"GFPTCH01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPTCH\"\n  },\n  {\n    \"code\": \"GFSETR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSETR\"\n  },\n  {\n    \"code\": \"GFMETI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMETI\"\n  },\n  {\n    \"code\": \"GFTIGF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"XYXYXY\"\n  },\n  {\n    \"code\": \"GFTRAI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTRAI\"\n  },\n  {\n    \"code\": \"GFGSEM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSEM\"\n  },\n  {\n    \"code\": \"GFOBIR28\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFSWIS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSWIS\"\n  },\n  {\n    \"code\": \"GFNOBL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNOBL\"\n  },\n  {\n    \"code\": \"GFGSYS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSYS\"\n  },\n  {\n    \"code\": \"GFPCTY01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPCTY\"\n  },\n  {\n    \"code\": \"GFEEPO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEEPO\"\n  },\n  {\n    \"code\": \"GFGCIR01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFGCIR\"\n  },\n  {\n    \"code\": \"GFBORE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBORE\"\n  },\n  {\n    \"code\": \"GFFLEX01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFFLEX\"\n  },\n  {\n    \"code\": \"GFTIBP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTIBP\"\n  },\n  {\n    \"code\": \"GFTIAX01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTIAX\"\n  },\n  {\n    \"code\": \"GFTINX01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTINX\"\n  },\n  {\n    \"code\": \"GFPEGB01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFPEGB\"\n  },\n  {\n    \"code\": \"GFICYG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFICYG\"\n  },\n  {\n    \"code\": \"TICECN01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"TICECN\"\n  },\n  {\n    \"code\": \"TICECA01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"TICECA\"\n  },\n  {\n    \"code\": \"GFTIGF02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTIGF\"\n  },\n  {\n    \"code\": \"GFOBIR59\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFOBIT04\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"ITOPER\"\n  },\n  {\n    \"code\": \"GFTDKB01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFTDKB\"\n  },\n  {\n    \"code\": \"GFTERF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTERF\"\n  },\n  {\n    \"code\": \"GFTERS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTERS\"\n  },\n  {\n    \"code\": \"GFGZNA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGZNA\"\n  },\n  {\n    \"code\": \"GFSWAQ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWAQ\"\n  },\n  {\n    \"code\": \"GFBRSL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBRSL\"\n  },\n  {\n    \"code\": \"GFOXOC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFOXOC\"\n  },\n  {\n    \"code\": \"GFSTEQ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSTEQ\"\n  },\n  {\n    \"code\": \"GFALNA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFALNA\"\n  },\n  {\n    \"code\": \"GFSORE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSORE\"\n  },\n  {\n    \"code\": \"GFNOVA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNOVA\"\n  },\n  {\n    \"code\": \"GFSVDT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSVDT\"\n  },\n  {\n    \"code\": \"GFFDKB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFNVTK01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNVTK\"\n  },\n  {\n    \"code\": \"GFPSSP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPSSP\"\n  },\n  {\n    \"code\": \"GFOBIR15\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFREDE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFREDE\"\n  },\n  {\n    \"code\": \"GFNJTS01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFNJTS\"\n  },\n  {\n    \"code\": \"GFFLIJ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFFLIJ\"\n  },\n  {\n    \"code\": \"GFESLC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFESLC\"\n  },\n  {\n    \"code\": \"IAGRTGDFDTMED01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GDFDT\"\n  },\n  {\n    \"code\": \"GFVEBH01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVEBH\"\n  },\n  {\n    \"code\": \"GFSEOL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSEOL\"\n  },\n  {\n    \"code\": \"GFELEC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFELEC\"\n  },\n  {\n    \"code\": \"GFMANO01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFMANO\"\n  },\n  {\n    \"code\": \"IAQUEFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IABLAFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IATAIFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IA007150FLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IADKBFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IAOLTENICHGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"ENICH\"\n  },\n  {\n    \"code\": \"GRTELENGY01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"SIATM\"\n  },\n  {\n    \"code\": \"IA-GASSCO-GDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GASSCO\"\n  },\n  {\n    \"code\": \"IA-ERT-GDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"ERT\"\n  },\n  {\n    \"code\": \"IADKFDKLNGGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"21X000000001331\"\n  },\n  {\n    \"code\": \"IA-GDFT-STO\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"SICS\"\n  },\n  {\n    \"code\": \"IAJURASWGTGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"SWGT\"\n  },\n  {\n    \"code\": \"GFAOTE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFAOTE\"\n  },\n  {\n    \"code\": \"GFBCME01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBCME\"\n  },\n  {\n    \"code\": \"GFBRSP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBRSP\"\n  },\n  {\n    \"code\": \"GFOPEN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFOPEN\"\n  },\n  {\n    \"code\": \"GFPIVA01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFPIVA\"\n  },\n  {\n    \"code\": \"GFOBIR60\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOPER\"\n  },\n  {\n    \"code\": \"GFPIVQ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFPIVQ\"\n  },\n  {\n    \"code\": \"GFPIVB01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFPIVB\"\n  },\n  {\n    \"code\": \"GFGLEN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGLEN\"\n  },\n  {\n    \"code\": \"GFCITI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFNUON01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFBNPP01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"\"\n  },\n  {\n    \"code\": \"GFSWDQ01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWDQ\"\n  },\n  {\n    \"code\": \"GFSWHB01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWHB\"\n  },\n  {\n    \"code\": \"IAPIVFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"IAVIRTUALYSFLXGDFT\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"FLX\"\n  },\n  {\n    \"code\": \"GFEDAN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEDAN\"\n  },\n  {\n    \"code\": \"GFGZNT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGZNT\"\n  },\n  {\n    \"code\": \"GFVEFR01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFVEFR\"\n  },\n  {\n    \"code\": \"GFENBW01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENBW\"\n  },\n  {\n    \"code\": \"GFPSTE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPSTE\"\n  },\n  {\n    \"code\": \"GFDUEN01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFDUEN\"\n  },\n  {\n    \"code\": \"GFCENT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCENT\"\n  },\n  {\n    \"code\": \"GFENET01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFENET\"\n  },\n  {\n    \"code\": \"GFNEXT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNEXT\"\n  },\n  {\n    \"code\": \"GFHERA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFHERA\"\n  },\n  {\n    \"code\": \"GFCRIS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCRIS\"\n  },\n  {\n    \"code\": \"GFTIMU01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTIMU\"\n  },\n  {\n    \"code\": \"GFINCO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFINCO\"\n  },\n  {\n    \"code\": \"GFCEZG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCEZG\"\n  },\n  {\n    \"code\": \"GFMPIL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMPIL\"\n  },\n  {\n    \"code\": \"GFTGPB01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTGPB\"\n  },\n  {\n    \"code\": \"GFGSET01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSET\"\n  },\n  {\n    \"code\": \"GFEDFI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEDFI\"\n  },\n  {\n    \"code\": \"GFSHBV01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSHBV\"\n  },\n  {\n    \"code\": \"GFSWAP01\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFSWAP\"\n  },\n  {\n    \"code\": \"GFBPCS\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBPCS\"\n  },\n  {\n    \"code\": \"GFBPCS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBPCS\"\n  },\n  {\n    \"code\": \"GFGZPS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGZPS\"\n  },\n  {\n    \"code\": \"GFTIRW01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFTIRW\"\n  },\n  {\n    \"code\": \"GFALPH01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFALPH\"\n  },\n  {\n    \"code\": \"GFRPAG01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFRPAG\"\n  },\n  {\n    \"code\": \"GFEPCO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEPCO\"\n  },\n  {\n    \"code\": \"GFCOPM01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCOPM\"\n  },\n  {\n    \"code\": \"GFASPA01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFASPA\"\n  },\n  {\n    \"code\": \"GFEPGO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFEPGO\"\n  },\n  {\n    \"code\": \"GFMFTE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFMFTE\"\n  },\n  {\n    \"code\": \"GFOBIR32\",\n    \"type\": \"GRTGAZ\",\n    \"shipperCode\": \"GFOBIR\"\n  },\n  {\n    \"code\": \"GFCOBV01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCOBV\"\n  },\n  {\n    \"code\": \"GFGZPF01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGZPF\"\n  },\n  {\n    \"code\": \"GFBGFI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBGFI\"\n  },\n  {\n    \"code\": \"GFPAVE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFPAVE\"\n  },\n  {\n    \"code\": \"GFGSPC01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSPC\"\n  },\n  {\n    \"code\": \"GFGSYS02\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGSYS\"\n  },\n  {\n    \"code\": \"GFOHME01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFOHME\"\n  },\n  {\n    \"code\": \"GFWINT01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFWINT\"\n  },\n  {\n    \"code\": \"GFBKWE01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFBKWE\"\n  },\n  {\n    \"code\": \"GFNORL01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFNORL\"\n  },\n  {\n    \"code\": \"GFGNCO01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFGNCO\"\n  },\n  {\n    \"code\": \"GFSUMI01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFSUMI\"\n  },\n  {\n    \"code\": \"GFCEPS01\",\n    \"type\": \"ACHEMINEMENT\",\n    \"shipperCode\": \"GFCEPS\"\n  }\n]",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "6f76703b-80b0-4ad5-932d-ac0c6b11732c",
+			"uid": "0-6f76703b-80b0-4ad5-932d-ac0c6b11732c",
+			"name": "flux-physique",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"42eee25b-73e4-48b5-9e42-e0be7c47a7de",
+				"d88ba103-d99b-4fde-aee3-15d0b9d3f720",
+				"a5f8ec33-88dd-4aa7-a322-ae30a6e4860d"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-06-15T14:58:03.319Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "42eee25b-73e4-48b5-9e42-e0be7c47a7de",
+					"uid": "0-42eee25b-73e4-48b5-9e42-e0be7c47a7de",
+					"name": "partition-keys",
+					"url": "http://localhost:8089/flux-physique/v1/partition-keys",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "6f76703b-80b0-4ad5-932d-ac0c6b11732c",
+					"rawModeData": "{\n    \"gasDay\": \"2021-05-26\",\n    \"pgd\": 4,\n    \"firstPcrKey\": \"QUEVY\",\n    \"firstPcrValue\": \"200\",\n    \"secondPcrKey\": \"BLAREGNIES\",\n    \"secondPcrValue\": \"500\",\n    \"unlockedPcrKey\": \"ALVERINGEM\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "a5f8ec33-88dd-4aa7-a322-ae30a6e4860d",
+					"uid": "0-a5f8ec33-88dd-4aa7-a322-ae30a6e4860d",
+					"name": "partitions Env",
+					"url": "https://api.carimbo.offre-dev.grtgaz.com/flux-physique/v1/partitions",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+					},
+					"collectionId": "6f76703b-80b0-4ad5-932d-ac0c6b11732c",
+					"rawModeData": "{\n    \"gasDay\": \"2021-10-21\",\n    \"pgd\": 21\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "d88ba103-d99b-4fde-aee3-15d0b9d3f720",
+					"uid": "0-d88ba103-d99b-4fde-aee3-15d0b9d3f720",
+					"name": "partitions",
+					"url": "http://localhost:8089/flux-physique/v1/partitions",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "6f76703b-80b0-4ad5-932d-ac0c6b11732c",
+					"rawModeData": "{\n    \"gasDay\": \"2021-08-21\",\n    \"pgd\": 21\n}",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "71ac9cf1-68e1-4937-a90b-82ab15c962a9",
+			"uid": "0-71ac9cf1-68e1-4937-a90b-82ab15c962a9",
+			"name": "prev-conso",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"d6dce9be-1bb6-4d77-bd87-93e344f11ec8",
+				"2b872306-ae7c-46eb-a884-9c2ab03aa658"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-06-15T15:01:51.861Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "2b872306-ae7c-46eb-a884-9c2ab03aa658",
+					"uid": "0-2b872306-ae7c-46eb-a884-9c2ab03aa658",
+					"name": "get prev consos",
+					"url": "https://api.offre-stg.grtgaz.com/exposition/v1/previsions-consommation-pe?journeeGaziereStart=2021-06-15&perimetreEquilibrage=GRTGAZ&typeDonnee=J",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "journeeGaziereStart",
+							"value": "2021-06-15",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "perimetreEquilibrage",
+							"value": "GRTGAZ",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "typeDonnee",
+							"value": "J",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJhcGk6Ly9SSU8tRFNHLVBST1hZLVBSRUNPIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkLyIsImlhdCI6MTYyMzY4NDA2NSwibmJmIjoxNjIzNjg0MDY1LCJleHAiOjE2MjM2ODc5NjUsImFpbyI6IkUyWmdZR2lRbjloMFZubDNwYys4N0dNekhTdDFBQT09IiwiYXBwaWQiOiI1OGIzNDZkZi0yYzAwLTRkMTItOTBiZS02Yjg4NjBlYjQ2ZjciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC80YTcyMDYxZi05NjJjLTRkMzItOWNjZi1kNDE2NjU3MGZmM2QvIiwib2lkIjoiYmViOThlOWQtNTI0MS00YjUxLWFmMWUtNmIwOTJjOTAyNTZkIiwicmgiOiIwLkFVZ0FId1p5U2l5V01rMmN6OVFXWlhEX1BkOUdzMWdBTEJKTmtMNXJpR0RyUnZkSUFBQS4iLCJyb2xlcyI6WyJQUk9YWS1QUkVDTy1JbnRlcm5lLUFwcGxpY2F0aW9uLUxlY3R1cmUiXSwic3ViIjoiYmViOThlOWQtNTI0MS00YjUxLWFmMWUtNmIwOTJjOTAyNTZkIiwidGlkIjoiNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkIiwidXRpIjoiQUludU90b2xuRTZiejZ0LUVMdDVBQSIsInZlciI6IjEuMCJ9.BisJ08vKI_gPGLZkl56xYu4wu62Wl0vEA53AxFbA5As2UV-kaPkpCwkVQifE96K5MfMtVZ4kYCAZGnQX7jt956opP7Bi-CovoHdD1Z3lPfyEMk0gR6sr9YCg7ikEG_5bxUJofJg97AK8yzIxYYama-e0zLFJkgZ4smwkjScgU22KHeAiyCZnjpTb9GD6UyhX_IyN7feB774GG_y2RFFge3eHXVSHxe7M7V33djhGYIXfsXzMFrDoBEMOY9npvwBSQYEaq9Ksi4MeHKmBocv_lRiXAaIkeZVuuEn0Q3R0Tf8kZtnoyORAF-CpyIouaCEeOuOr8Z4_1x00qTJziQQL7A"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJhcGk6Ly9SSU8tRFNHLVBST1hZLVBSRUNPIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkLyIsImlhdCI6MTYyMzY4NDA2NSwibmJmIjoxNjIzNjg0MDY1LCJleHAiOjE2MjM2ODc5NjUsImFpbyI6IkUyWmdZR2lRbjloMFZubDNwYys4N0dNekhTdDFBQT09IiwiYXBwaWQiOiI1OGIzNDZkZi0yYzAwLTRkMTItOTBiZS02Yjg4NjBlYjQ2ZjciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC80YTcyMDYxZi05NjJjLTRkMzItOWNjZi1kNDE2NjU3MGZmM2QvIiwib2lkIjoiYmViOThlOWQtNTI0MS00YjUxLWFmMWUtNmIwOTJjOTAyNTZkIiwicmgiOiIwLkFVZ0FId1p5U2l5V01rMmN6OVFXWlhEX1BkOUdzMWdBTEJKTmtMNXJpR0RyUnZkSUFBQS4iLCJyb2xlcyI6WyJQUk9YWS1QUkVDTy1JbnRlcm5lLUFwcGxpY2F0aW9uLUxlY3R1cmUiXSwic3ViIjoiYmViOThlOWQtNTI0MS00YjUxLWFmMWUtNmIwOTJjOTAyNTZkIiwidGlkIjoiNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkIiwidXRpIjoiQUludU90b2xuRTZiejZ0LUVMdDVBQSIsInZlciI6IjEuMCJ9.BisJ08vKI_gPGLZkl56xYu4wu62Wl0vEA53AxFbA5As2UV-kaPkpCwkVQifE96K5MfMtVZ4kYCAZGnQX7jt956opP7Bi-CovoHdD1Z3lPfyEMk0gR6sr9YCg7ikEG_5bxUJofJg97AK8yzIxYYama-e0zLFJkgZ4smwkjScgU22KHeAiyCZnjpTb9GD6UyhX_IyN7feB774GG_y2RFFge3eHXVSHxe7M7V33djhGYIXfsXzMFrDoBEMOY9npvwBSQYEaq9Ksi4MeHKmBocv_lRiXAaIkeZVuuEn0Q3R0Tf8kZtnoyORAF-CpyIouaCEeOuOr8Z4_1x00qTJziQQL7A"
+					},
+					"collectionId": "71ac9cf1-68e1-4937-a90b-82ab15c962a9",
+					"pathVariables": {}
+				},
+				{
+					"id": "d6dce9be-1bb6-4d77-bd87-93e344f11ec8",
+					"uid": "0-d6dce9be-1bb6-4d77-bd87-93e344f11ec8",
+					"name": "get token",
+					"url": "https://login.microsoftonline.com/4a72061f-962c-4d32-9ccf-d4166570ff3d/oauth2/v2.0/token",
+					"description": "",
+					"data": [
+						{
+							"key": "grant_type",
+							"value": " client_credentials",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": " 58b346df-2c00-4d12-90be-6b8860eb46f7",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": " api://RIO-DSG-PROXY-PRECO/.default",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": " 7xap9y8mThAy44RtBwAgk7ZVWxkYQir0",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "71ac9cf1-68e1-4937-a90b-82ab15c962a9",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "99a30825-b2a4-4839-bef9-cf894ddd0d58",
+			"uid": "0-99a30825-b2a4-4839-bef9-cf894ddd0d58",
+			"name": "nomination",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"4fa440ee-fc12-45a8-b2d5-9ab954a2eb9f",
+				"f4cf8c7d-3561-4b2e-a69e-b6f0a619fb01",
+				"80cf197c-6082-446c-a3fe-174bd924cfea"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-05-27T13:17:26.695Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "4fa440ee-fc12-45a8-b2d5-9ab954a2eb9f",
+					"uid": "0-4fa440ee-fc12-45a8-b2d5-9ab954a2eb9f",
+					"name": "upsert nomination",
+					"url": "https://api.carimbo.offre-dev.grtgaz.com/nomination/v1/nominations/_bulk",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+					},
+					"collectionId": "99a30825-b2a4-4839-bef9-cf894ddd0d58",
+					"rawModeData": "{\n    \"operation\": \"upsert\",\n    \"nominations\": [\n        {\n            \"transactionOriginalId\": 609323377,\n            \"gasDay\": \"2021-10-21\",\n            \"contractualPoint\": \"EG001F\",\n            \"contractCode\": \"GFAZGN01\",\n            \"direction\": \"Rec\",\n            \"counterparty\": \"FLXOPS\",\n            \"pgd\": \"21\",\n            \"currentValue\": 0,\n            \"requestedValue\": 9292,\n            \"controlledValue\": 902071262,\n            \"optimizedValue\": 902071262,\n            \"sentValue\": 902071262,\n            \"partnerAcceptedValue\": 902071262,\n            \"confirmedValue\": 902071262\n        }\n    ]\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "80cf197c-6082-446c-a3fe-174bd924cfea",
+					"uid": "0-80cf197c-6082-446c-a3fe-174bd924cfea",
+					"name": "get nominations local",
+					"url": "http://localhost:8082/nomination/v1/nominations?gasDay=2021-07-21&contractualPoints=IR0006",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gasDay",
+							"value": "2021-07-21",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "contractualPoints",
+							"value": "IR0006",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "99a30825-b2a4-4839-bef9-cf894ddd0d58",
+					"pathVariables": {}
+				},
+				{
+					"id": "f4cf8c7d-3561-4b2e-a69e-b6f0a619fb01",
+					"uid": "0-f4cf8c7d-3561-4b2e-a69e-b6f0a619fb01",
+					"name": "get nominations",
+					"url": "https://api.offre-stg.grtgaz.com/nomination/v1/nominations?gasDay=2021-06-12&pgd=02&contractCode=GFOPER01,GFTIGF02",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gasDay",
+							"value": "2021-06-12",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "pgd",
+							"value": "02",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "contractCode",
+							"value": "GFOPER01,GFTIGF02",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI1OGIzNDZkZi0yYzAwLTRkMTItOTBiZS02Yjg4NjBlYjQ2ZjciLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC80YTcyMDYxZi05NjJjLTRkMzItOWNjZi1kNDE2NjU3MGZmM2QvIiwiaWF0IjoxNjIzNDE3OTM1LCJuYmYiOjE2MjM0MTc5MzUsImV4cCI6MTYyMzQyMTgzNSwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQXVVQi9nak5tL0lUZlhUWm1HQUJydmR2dENxMVRRWG1YaFBJcXg2K0NWZ1M0cWUzbUQ2SVNBVXhlZ1lGWkRvNWUiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiNThiMzQ2ZGYtMmMwMC00ZDEyLTkwYmUtNmI4ODYwZWI0NmY3IiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImM2MzRiYjg2LTNkMDEtNGExMi04YTE2LWU0ZjVmZTRmNTA3NyIsInJoIjoiMC5BVWdBSHdaeVNpeVdNazJjejlRV1pYRF9QZDlHczFnQUxCSk5rTDVyaUdEclJ2ZElBUGsuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJ4MlZ4WlJoVkE0eU1OSXdFU0hCcU9SMHppdVpfdUlZRjEtaXEtWmRtYXhJIiwidGlkIjoiNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkIiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtc3RnLmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtc3RnLmdydGdhei5jb20iLCJ1dGkiOiJVTkZ2b0ZMamNVU3gzUEdaaU9tV0FBIiwidmVyIjoiMS4wIn0.dYHIeCXeZQNU1lDlLYnLphxeOXZyPYq2z2gcE00yFLBT0_jasondrZ3NHUxI6nK-pwZadmZF8gpZSuUWg5uAxaV6XAn924nuAnGqKkSU-fV9hGlLYVVV-B5p359pflpkh3Ss8INKFKrY7RaxsMHbbjKA3ZgKOlJ-lC9yQondHgzuN29wPU3LIe4mWMDXFEazV3wM_Ae5xuaTVV4alJGADPRZyKOjH9O-JhUH4t48AOqPa2WhzSRXOS-VYAFkJPYXCA0OWROX6xEaVSthKBfo-32fG6PtxCV1v1JRuy-KM3luZmh3ykU2WsaSciyPMuTA0xCWnpuvyhG6vMpbx66BcQ"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiI1OGIzNDZkZi0yYzAwLTRkMTItOTBiZS02Yjg4NjBlYjQ2ZjciLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC80YTcyMDYxZi05NjJjLTRkMzItOWNjZi1kNDE2NjU3MGZmM2QvIiwiaWF0IjoxNjIzNDE3OTM1LCJuYmYiOjE2MjM0MTc5MzUsImV4cCI6MTYyMzQyMTgzNSwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQXVVQi9nak5tL0lUZlhUWm1HQUJydmR2dENxMVRRWG1YaFBJcXg2K0NWZ1M0cWUzbUQ2SVNBVXhlZ1lGWkRvNWUiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiNThiMzQ2ZGYtMmMwMC00ZDEyLTkwYmUtNmI4ODYwZWI0NmY3IiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImM2MzRiYjg2LTNkMDEtNGExMi04YTE2LWU0ZjVmZTRmNTA3NyIsInJoIjoiMC5BVWdBSHdaeVNpeVdNazJjejlRV1pYRF9QZDlHczFnQUxCSk5rTDVyaUdEclJ2ZElBUGsuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJ4MlZ4WlJoVkE0eU1OSXdFU0hCcU9SMHppdVpfdUlZRjEtaXEtWmRtYXhJIiwidGlkIjoiNGE3MjA2MWYtOTYyYy00ZDMyLTljY2YtZDQxNjY1NzBmZjNkIiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtc3RnLmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtc3RnLmdydGdhei5jb20iLCJ1dGkiOiJVTkZ2b0ZMamNVU3gzUEdaaU9tV0FBIiwidmVyIjoiMS4wIn0.dYHIeCXeZQNU1lDlLYnLphxeOXZyPYq2z2gcE00yFLBT0_jasondrZ3NHUxI6nK-pwZadmZF8gpZSuUWg5uAxaV6XAn924nuAnGqKkSU-fV9hGlLYVVV-B5p359pflpkh3Ss8INKFKrY7RaxsMHbbjKA3ZgKOlJ-lC9yQondHgzuN29wPU3LIe4mWMDXFEazV3wM_Ae5xuaTVV4alJGADPRZyKOjH9O-JhUH4t48AOqPa2WhzSRXOS-VYAFkJPYXCA0OWROX6xEaVSthKBfo-32fG6PtxCV1v1JRuy-KM3luZmh3ykU2WsaSciyPMuTA0xCWnpuvyhG6vMpbx66BcQ"
+					},
+					"collectionId": "99a30825-b2a4-4839-bef9-cf894ddd0d58",
+					"headers": "",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "a365a6a0-918a-4df6-afc6-a8ee8ad8f569",
+			"uid": "0-a365a6a0-918a-4df6-afc6-a8ee8ad8f569",
+			"name": "flux-implicite",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"4b8e70a4-6a01-46c5-9b18-2b56c689f478",
+				"d9219596-b810-4065-bf75-4df525e35a40",
+				"bca19a11-3c2c-4daa-a340-b1a0d69d4000"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-06-15T15:03:03.216Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "4b8e70a4-6a01-46c5-9b18-2b56c689f478",
+					"uid": "0-4b8e70a4-6a01-46c5-9b18-2b56c689f478",
+					"name": "terega-requirements",
+					"url": "http://localhost:8090/flux-implicite/v1/terega-requirements",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjIyNjU5MTYyLCJuYmYiOjE2MjI2NTkxNjIsImV4cCI6MTYyMjY2MzA2MiwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQUlNVFNHNUhLTXVxYXFoUktzUGFhc1FJWm9kM3k2ZVd2VjhHNlJPaDNiNWgvZ24rN2hMa3B3UGpCMktuTVgvSjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImRhZWY1ZDQwLWY5MTgtNDZlZC04N2MwLTdjYjk3ZWRhYzA1MSIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBTnMuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJobGRjVEVqdzNZUzMtQTY0QlMyNjRYZHdTb1lqOUp1YXNMaUlqeUtlcDN3IiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJic2N5Y3hnZDNVcWxpdXBlOG9ZS0FBIiwidmVyIjoiMS4wIn0.PVKYaR7DLm8Kboha4LENvcZ60JFGJTWk44H6itpbW1jO29rE46n7zqxbQeh4IZWCfdR1uOrUjr_QM9O5UMcqOo1GXO_8JXIR5-mE1FtjVPfNny6r2QAusuQL5ZQvSH9DQ2wTLSx5a5m65kku9U7dXBRX-cXUEqqZEsPMGtVuPhMYS6DMEul4s6SdBuV7JYMp7DqTvltSfw3sUyke_SC6t-iQ3tq79WHKUab2v3R_ZR3kqsf_FiCvhkB5IPYu3pWZY_MvmwRkXdL35qfncvgYdZbmEMqUwCUkAFa3rymqD5H8GYAUmMqFkvOjXF2nOVLKZG1lA46tj6Y94u6wMEci5Q"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjIyNjU5MTYyLCJuYmYiOjE2MjI2NTkxNjIsImV4cCI6MTYyMjY2MzA2MiwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQUlNVFNHNUhLTXVxYXFoUktzUGFhc1FJWm9kM3k2ZVd2VjhHNlJPaDNiNWgvZ24rN2hMa3B3UGpCMktuTVgvSjciLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImRhZWY1ZDQwLWY5MTgtNDZlZC04N2MwLTdjYjk3ZWRhYzA1MSIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBTnMuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJobGRjVEVqdzNZUzMtQTY0QlMyNjRYZHdTb1lqOUp1YXNMaUlqeUtlcDN3IiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJic2N5Y3hnZDNVcWxpdXBlOG9ZS0FBIiwidmVyIjoiMS4wIn0.PVKYaR7DLm8Kboha4LENvcZ60JFGJTWk44H6itpbW1jO29rE46n7zqxbQeh4IZWCfdR1uOrUjr_QM9O5UMcqOo1GXO_8JXIR5-mE1FtjVPfNny6r2QAusuQL5ZQvSH9DQ2wTLSx5a5m65kku9U7dXBRX-cXUEqqZEsPMGtVuPhMYS6DMEul4s6SdBuV7JYMp7DqTvltSfw3sUyke_SC6t-iQ3tq79WHKUab2v3R_ZR3kqsf_FiCvhkB5IPYu3pWZY_MvmwRkXdL35qfncvgYdZbmEMqUwCUkAFa3rymqD5H8GYAUmMqFkvOjXF2nOVLKZG1lA46tj6Y94u6wMEci5Q"
+					},
+					"collectionId": "a365a6a0-918a-4df6-afc6-a8ee8ad8f569",
+					"rawModeData": "{\n    \"gasDay\" : \"2021-05-27\",\n    \"version\" : 1,\n    \"status\" : \"E\",\n    \"receivedNominations\" : 1,\n    \"deliveredNominations\" : 1,\n    \"teregaPrevConsos\" : 1,\n    \"exitValue\" : 1,\n    \"requirementValue\" : 2\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "bca19a11-3c2c-4daa-a340-b1a0d69d4000",
+					"uid": "0-bca19a11-3c2c-4daa-a340-b1a0d69d4000",
+					"name": "get terega-requirements local",
+					"url": "http://localhost:8090/flux-implicite/v1/terega-requirements",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "a365a6a0-918a-4df6-afc6-a8ee8ad8f569",
+					"pathVariables": {}
+				},
+				{
+					"id": "d9219596-b810-4065-bf75-4df525e35a40",
+					"uid": "0-d9219596-b810-4065-bf75-4df525e35a40",
+					"name": "process",
+					"url": "http://localhost:8090/flux-implicite/v1/process",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "a365a6a0-918a-4df6-afc6-a8ee8ad8f569",
+					"rawModeData": "{\n    \"gasDay\": \"2021-05-27\",\n    \"pgd\": 21,\n    \"status\": \"E\"\n}",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+			"uid": "0-c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+			"name": "matching-interne",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"3f85cce8-5d27-4f25-bba4-6ca2f6e8eae1",
+				"5e94c46a-53e8-42c1-a257-367868450e0d",
+				"65b5cee3-c090-447f-80d4-0c55a21db4ad",
+				"ae596b18-f76b-4487-9b20-1263cc6733c8"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2021-06-15T15:00:07.077Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "3f85cce8-5d27-4f25-bba4-6ca2f6e8eae1",
+					"uid": "0-3f85cce8-5d27-4f25-bba4-6ca2f6e8eae1",
+					"name": "contractual_points",
+					"url": "https://api.offre-dev.grtgaz.com/flux-implicite/v1/contractual_points",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjIzNDE4MTg3LCJuYmYiOjE2MjM0MTgxODcsImV4cCI6MTYyMzQyMjA4NywiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQWZEZUxMcks4WVhwQWtDdzEwd0dwdkgyZzF5RUVQQzBsNHEzbjdmRnE5QVJOaWpuazFjS1k3NDE0dS9PSXJIYWYiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImRhZWY1ZDQwLWY5MTgtNDZlZC04N2MwLTdjYjk3ZWRhYzA1MSIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBTnMuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJobGRjVEVqdzNZUzMtQTY0QlMyNjRYZHdTb1lqOUp1YXNMaUlqeUtlcDN3IiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJ5M1VVZEctOUNVdVhFTkUwcGtxTEFBIiwidmVyIjoiMS4wIn0.ICphVbwfryj5r5GgtMTNY0TkjO4bUynpefTyuKt0EQqcbSv7yBV-AcuIrzngc-9ytDZHBN_hssiySYSkCfcOQx1UlEPpifWP4kCkLPgwd28Anyqqw3B5IZkmy-SQYYfzhpXtRWv2Sr-lN558xKAYqwKE9RmymdDqOW_xdV9GwV57Q2V12m4yYx6qHPnggsmk0hMX6EcMGpYKr_GI202UB6p5h5awReLk1BwLuSWfzCE5Z4dwgRLjAu03hBA76ZA2h4DiMd7FhYVvmGipYSvDxkZ8ba09zMW_4zb_XQXcBnP9S-U3u_xK1PHKKprby5x0nRj1LQgClFr36MFyVHourA"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJlYTM3N2FmNi00ZDViLTQwZTEtYThiMi02Yzk0MjkyOGYxMGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jZDAxMWMzOC05NzVlLTRiMmEtOGIxZC00ZWIwMDc2NWQ0NTcvIiwiaWF0IjoxNjIzNDE4MTg3LCJuYmYiOjE2MjM0MTgxODcsImV4cCI6MTYyMzQyMjA4NywiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQWZEZUxMcks4WVhwQWtDdzEwd0dwdkgyZzF5RUVQQzBsNHEzbjdmRnE5QVJOaWpuazFjS1k3NDE0dS9PSXJIYWYiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiZWEzNzdhZjYtNGQ1Yi00MGUxLWE4YjItNmM5NDI5MjhmMTBmIiwiYXBwaWRhY3IiOiIxIiwiaXBhZGRyIjoiNzcuMTMyLjE1Mi4xNTMiLCJuYW1lIjoiT3DDqXJhdGV1ciBJbnRlcmZhY2UgTWFyY2jDqSAoT0lNKSIsIm9pZCI6ImRhZWY1ZDQwLWY5MTgtNDZlZC04N2MwLTdjYjk3ZWRhYzA1MSIsInJoIjoiMC5BVWNBT0J3QnpWNlhLa3VMSFU2d0IyWFVWX1o2Ti1wYlRlRkFxTEpzbENrbzhROUhBTnMuIiwicm9sZXMiOlsiQ0FSSU1CTy1BZG1pbmlzdHJhdGV1ciJdLCJzY3AiOiJVc2VyLlJlYWQiLCJzdWIiOiJobGRjVEVqdzNZUzMtQTY0QlMyNjRYZHdTb1lqOUp1YXNMaUlqeUtlcDN3IiwidGlkIjoiY2QwMTFjMzgtOTc1ZS00YjJhLThiMWQtNGViMDA3NjVkNDU3IiwidW5pcXVlX25hbWUiOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1cG4iOiJvaW1Ab2ZmcmUtZGV2LmdydGdhei5jb20iLCJ1dGkiOiJ5M1VVZEctOUNVdVhFTkUwcGtxTEFBIiwidmVyIjoiMS4wIn0.ICphVbwfryj5r5GgtMTNY0TkjO4bUynpefTyuKt0EQqcbSv7yBV-AcuIrzngc-9ytDZHBN_hssiySYSkCfcOQx1UlEPpifWP4kCkLPgwd28Anyqqw3B5IZkmy-SQYYfzhpXtRWv2Sr-lN558xKAYqwKE9RmymdDqOW_xdV9GwV57Q2V12m4yYx6qHPnggsmk0hMX6EcMGpYKr_GI202UB6p5h5awReLk1BwLuSWfzCE5Z4dwgRLjAu03hBA76ZA2h4DiMd7FhYVvmGipYSvDxkZ8ba09zMW_4zb_XQXcBnP9S-U3u_xK1PHKKprby5x0nRj1LQgClFr36MFyVHourA"
+					},
+					"collectionId": "c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+					"pathVariables": {}
+				},
+				{
+					"id": "5e94c46a-53e8-42c1-a257-367868450e0d",
+					"uid": "0-5e94c46a-53e8-42c1-a257-367868450e0d",
+					"name": "contracts local",
+					"url": "http://localhost:8088/matching-interne/v1/contracts",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+					"rawModeData": "{\n    \"code\": \"toto\",\n    \"type\": \"titiiii\",\n    \"shipperCode\": \"tata\"\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "65b5cee3-c090-447f-80d4-0c55a21db4ad",
+					"uid": "0-65b5cee3-c090-447f-80d4-0c55a21db4ad",
+					"name": "process local",
+					"url": "http://localhost:8088/matching-interne/v1/matching-nominations?gasDay=2020-02-27&pgd=02",
+					"description": "",
+					"data": null,
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": null,
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gasDay",
+							"value": "2020-02-27",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "pgd",
+							"value": "02",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+					"pathVariables": {}
+				},
+				{
+					"id": "ae596b18-f76b-4487-9b20-1263cc6733c8",
+					"uid": "0-ae596b18-f76b-4487-9b20-1263cc6733c8",
+					"name": "process",
+					"url": "https://api.carimbo.offre-dev.grtgaz.com/matching-interne/v1/matching-nominations?gasDay=2021-10-21&pgd=21",
+					"description": "",
+					"data": null,
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": null,
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "gasDay",
+							"value": "2021-10-21",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "pgd",
+							"value": "21",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJraWQiOiJNN0VGYk5hSGQ5cTFzUW9ybUE5ZEJ3RUdSN0M1TzNpUnRKclI3Z0VvTnE4PSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM3JlMjY3aGxOME5KSm8xX2w4RUwwUSIsInN1YiI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX0tKVVZJUzN6WSIsImN1c3RvbTpmYXJvX2lkIjoiOTQ0M1FHIiwiY29nbml0bzp1c2VybmFtZSI6Ijk3M2ViMTQ5LTAxYWYtNGM3MS1iNTM1LTg2MTc3NmFmNWZhNSIsInByZWZlcnJlZF91c2VybmFtZSI6Ijk0NDNRR0B0ZXJhLWludC5pbmZyYWdhei5jb20iLCJnaXZlbl9uYW1lIjoiQWNocmFmIiwiY3VzdG9tOmdyb3VwcyI6IkdTQV9PRkZSRS1DQVJJTUJPX0FkbWluaXN0cmF0ZXVyIiwib3JpZ2luX2p0aSI6ImM3ZDQ1OGZjLTZiYTctNDM0MC1iNzA3LTk3OWZkYjA0M2YzMiIsImF1ZCI6IjcxamhobTY2NTE4YnNqdGlqamo1bDF2MWMxIiwiZXZlbnRfaWQiOiIyMjY5YzVkMi03YTZiLTQ4NTctYmRjNi02ZmNmMzI5Y2Q5NDkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzMjgxOTcyNiwiZXhwIjoxNjMyODYyOTI2LCJpYXQiOjE2MzI4MTk3MjYsImZhbWlseV9uYW1lIjoiRVNTQUlEIiwianRpIjoiNmE5OGUwZGUtY2Q2Yy00MTcxLWI0ZWQtY2JlNjhjMTA3YmViIiwiZW1haWwiOiJhY2hyYWYuZXNzYWlkQGV4dGVybmFsLmdydGdhei5jb20ifQ.q89vLItJxGlLwW6giSiNuNAYb4nj5ICMiGcMSAQIYZzkhYO2OgtYifz9baFbH0qwOQg580A9CiOs_NS-60ONrLZpd8JsztNLrKPqwbb2l8vQuOAP0ZXmhKvaijBhbxfCKlmF_QAhcQHqtf5IYVwPUkacqrvWz2Yddc-72XxjZpnAp2RywF2Be-vhr-z_iG7QIPVS6mVIXgl2EWs6TC4BCdJ56h29qryyAoJ1-J0NtghM3ilHT5NF_ITuVjFlcPi8gl0NpvqzxnDUclbacH-PAgYmFxra8cZVH60sgX12UrmGlM3s1EWQykYfkWKQ6l5D0OQUA9KdJ83-EWs6EJRDcw"
+					},
+					"collectionId": "c455801f-0a99-4c14-ac5a-c9bc290ad4e7",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "9c223f7f-eae3-425b-9445-6afa0c5764cb",
+			"name": "LOCAL",
+			"values": [
+				{
+					"key": "nomination",
+					"value": "http://localhost:8044/nomination",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "ad59b5bc-5ec4-4690-85f1-d683672f0448",
+			"name": "STG",
+			"values": [
+				{
+					"key": "nomination",
+					"value": "https://api.offre-stg.grtgaz.com/nomination",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "bb4d781a-8b2a-43b6-b264-e6a0907d3b94",
+			"name": "DEV",
+			"values": [
+				{
+					"key": "nomination",
+					"value": "https://api.offre-dev.grtgaz.com/nomination",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "2bb28f35-deaf-45f0-8922-52ad88fce395",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
